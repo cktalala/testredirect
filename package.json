@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@wirtual/wirtual-ui-component": "^1.0.35",
+    "@wirtual/wirtual-ui-component": "^1.0.36",
     "antd": "^5.25.1",
     "next": "14.0.4",
     "papaparse": "^5.5.2",
