@@ -13,9 +13,6 @@ export default function Home() {
         {
           method: "GET",
           credentials: "include",
-          headers: {
-            "Content-Type": "application/json",
-          },
         }
       );
 
@@ -26,18 +23,24 @@ export default function Home() {
         `https://api-dyp8.onrender.com/api/users/me`,
         {
           headers: {
-            Authorization: `Bearer ${data?.access_token}`,
+            Authorization: `Bearer ${data?.accessToken}`,
           },
         }
       );
-      console.log("responseUser: ", responseUser.json(), "data: ", data);
+      // const dataUser: GetApi = await responseUser?.json();
+      console.log(
+        "responseUser: ",
+        responseUser?.json(),
+        "data: ",
+        data.accessToken
+      );
     } catch (error) {
       console.log("error: ", error);
     }
   };
   return (
     <div className={styles.page}>
-      <WirtualNavbarWrapper />
+      <pmat-header />
       <main className={styles.main}>
         <Button onClick={handleGetAccess}>ssdsfdsfsdf</Button>
         <Image
