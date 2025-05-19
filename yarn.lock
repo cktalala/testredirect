@@ -315,10 +315,10 @@
   dependencies:
     "@types/node" "*"
 
-"@wirtual/wirtual-ui-component@^1.0.34":
-  version "1.0.34"
-  resolved "https://registry.yarnpkg.com/@wirtual/wirtual-ui-component/-/wirtual-ui-component-1.0.34.tgz#521a273441848270f91becb446020a18393aae74"
-  integrity sha512-OltTeRgyKu33TzfE49PzuUYlZRu0XXx/K7gogL2fZVJjeRj5wfn92q6HFkF+K2rldaBQgcdpt4ikNJDZQkIHWw==
+"@wirtual/wirtual-ui-component@^1.0.35":
+  version "1.0.35"
+  resolved "https://registry.yarnpkg.com/@wirtual/wirtual-ui-component/-/wirtual-ui-component-1.0.35.tgz#a7849f849b86f944a6bb036b2d08d9212a8c2e07"
+  integrity sha512-UZ1mXNBVdiOToI0LCvUPqcRAWPpvO46TPu88Zn47uvlBCphUY5eheuKpeTv8WuSk8uYqc6NC9YJ0a2d9eDXBdg==
 
 antd@^5.25.1:
   version "5.25.1"
