@@ -11,7 +11,11 @@ export default function Home() {
       const response = await fetch(
         `https://pmat-stg.wirtual.co/api/auth/access`,
         {
+          method: "GET",
           credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
       );
 
