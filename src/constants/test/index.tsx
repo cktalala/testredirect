@@ -3,12 +3,39 @@ import Image from "next/image";
 import styles from "../../app/page.module.css";
 import dynamic from "next/dynamic";
 import WirtualNavbarWrapper from "@/component/WirtualNavbarWrapper";
+import { Button } from "antd";
 
 export default function Home() {
+  const handleGetAccess = async () => {
+    try {
+      const response = await fetch(
+        `https://pmat-stg.wirtual.co/api/auth/access`,
+        {
+          credentials: "include",
+        }
+      );
+
+      const data = await response?.json();
+      // const data: { access_token: string } = await response?.json();
+
+      const responseUser = await fetch(
+        `https://api-dyp8.onrender.com/api/users/me`,
+        {
+          headers: {
+            Authorization: `Bearer ${data?.access_token}`,
+          },
+        }
+      );
+      console.log("responseUser: ", responseUser.json(), "data: ", data);
+    } catch (error) {
+      console.log("error: ", error);
+    }
+  };
   return (
     <div className={styles.page}>
       <WirtualNavbarWrapper />
       <main className={styles.main}>
+        <Button onClick={handleGetAccess}>ssdsfdsfsdf</Button>
         <Image
           className={styles.logo}
           src="/next.svg"
